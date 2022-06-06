@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Enigma Machine</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="content">
+          <h1>Enigma Machine</h1>
+
+          <p>
+            <label for="Input">Text to parse</label>
+            <input type="text" name="Input" id="Input" />
+          </p>
+
+          <div class="rotors">
+            <div class="three">
+              <p>
+                <label for="Rotor_0_0">Rotor 1</label>
+                <input
+                  type="text"
+                  name="Rotor_0_0"
+                  id="Rotor_0_0"
+                  value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                />
+                <input
+                  type="text"
+                  name="Rotor_0_1"
+                  id="Rotor_0_1"
+                  value="EKMFLGDQVZNTOWYHXUSPAIBRCJ"
+                />
+              </p>
+            </div>
+
+            <div class="three">
+              <p>
+                <label for="Rotor_1_0">Rotor 2</label>
+                <input
+                  type="text"
+                  name="Rotor_1_0"
+                  id="Rotor_1_0"
+                  value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                />
+                <input
+                  type="text"
+                  name="Rotor_1_1"
+                  id="Rotor_1_1"
+                  value="AJDKSIRUXBLHWTMCQGZNPYFVOE"
+                />
+              </p>
+            </div>
+
+            <div class="three">
+              <p>
+                <label for="Rotor_2_0">Rotor 3</label>
+                <input
+                  type="text"
+                  name="Rotor_2_0"
+                  id="Rotor_2_0"
+                  value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                />
+                <input
+                  type="text"
+                  name="Rotor_2_1"
+                  id="Rotor_2_1"
+                  value="BDFHJLCPRTXVZNYEIWGAKMUSQO"
+                />
+              </p>
+            </div>
+          </div>
+
+          <div class="reflector">
+            <div class="three">
+              <p>
+                <label for="Reflector_0">Reflector</label>
+                <input
+                  type="text"
+                  name="Reflector_0"
+                  id="Reflector_0"
+                  value="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                />
+                <input
+                  type="text"
+                  name="Reflector_1"
+                  id="Reflector_1"
+                  value="EJMZALYXVBWFCRQUONTSPIKHGD"
+                />
+              </p>
+            </div>
+          </div>
+          <p>
+            <button
+              type="button"
+              onclick="SolveEnigma()"
+              class="primary-action"
+            >
+              Solve
+            </button>
+          </p>
+
+          <h2>Results</h2>
+          <div id="results"></div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
