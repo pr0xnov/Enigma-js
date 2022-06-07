@@ -22,8 +22,6 @@ function SolveEnigma() {
   Reflector.push(document.getElementById("Reflector_1").value.split(""));
 
   let Machina = new Enigma(Rotors, Reflector, {
-    // MatchMode: document.getElementById("MatchMode").value,
-    // Match: document.getElementById("Match").value,
     Callback: function (Results) {
       let Holder = document.getElementById("results");
       while (Holder.childNodes.length) {
@@ -45,7 +43,7 @@ const Enigma = function (Rotors, Reflector, Config) {
   const _ = this;
 
   const DefaultConfig = {
-    // Match: "",
+    Match: "",
     MatchMode: "",
     Callback: function (Solutions) {
       console.log(Solutions);
